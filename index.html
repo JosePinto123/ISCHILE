@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InstaShopping</title>
+    <link rel="stylesheet" href="/css/estilos.css">
+    <script src="https://unpkg.com/boxicons@latest/dist/boxicons.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <header class="header" id="Buscador">
+        <box-icon class="hamburguer" alt="" name='menu' color='#f9f9f9' ></box-icon>
+        <nav class="menu-navegacion">
+                <a href="#Buscador">Buscador</a>
+                <a href="#tiendas">Tiendas</a>
+                <a href="#servicio">¿Qué puedes hacer?</a>
+                <a href="#moti">Herramientas</a>
+                <a href="#footer">Contacto</a>
+        </nav>
+        <div class="contenedor head">
+            <h1 class="titulo">InstaShopping Chile</h1>
+            <p class="copy">Buscador de tiendas de Instagram</p>
+            <div class="search-box">
+                <input type="text" name="caja_busqueda" id="caja_busqueda" class="search-txt" placeholder="Buscar tiendas..."/>
+                    <a class="search-btn" >
+                        <box-icon name='search-alt' color='#f9f6f6'></box-icon>
+                    </a>
+            </div>
+        </div>
+    </header>
+
+
+    <div class="contenedor">
+        <h2 class="subtitulo">Tiendas</h2>
+        <section class="contenedor-tabla" id="tiendas"> 
+            <table class="datos" id="datos"></table>
+        </section>
+    </div>
+
+
+    <main>
+        <section class="services contenedor" id="servicio">
+        <h2 class="subtitulo">¿Qué puedes hacer?</h2>
+            <div class="contenedor-servicio">
+                <img src="/img/pr_monochromatic.svg" alt="">
+                <div class="checklist-servicio">
+                    <div class="service">
+                        <h3 class="n-service"><span class="number">1</span>Buscar tiendas por área</h3>
+                        <p> Busca las páginas como tu quieras.</p>
+                    </div>
+                    <div class="service">
+                        <h3 class="n-service"><span class="number">2</span>Comentar</h3>
+                        <p> Podras dejar un comentario y puntuación en cada tienda.</p>
+                    </div>
+                    <div class="service">
+                        <h3 class="n-service"><span class="number">3</span>Crear una comunidad</h3>
+                        <p> Ayuda a posibles compradores y a Pymes.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="services contenedor" id="moti">
+                    <h2 class="subtitulo">Herramientas</h2>
+                    <div class="contenedor-servicio">
+                        <div class="checklist-servicio">
+                            <div class="service">
+                                <h3 class="n-service"><span class="number">1</span>Aplicación</h3>
+                                <p>La aplicación web está desarrollada en Javascript en el Front-end y PHP en el back-end.</p>
+                            </div>
+                            <div class="service">
+                                <h3 class="n-service"><span class="number">2</span>API</h3>
+                                <p> Por otro lado, nuestra página web se alimenta de informacion gracias a la API de instagram</p>
+                            </div>
+                            <div class="service">
+                                <h3 class="n-service"><span class="number">3</span>Herramientas</h3>
+                                <p> Por último, nuestra información se guardará en una base de datos MySql.</p>
+                            </div>
+                        </div>
+                        <img src="/img/web_developer_monochromatic.svg" alt="">
+                    </div>
+                    </section>
+    </main>
+    <footer id="footer">
+        <div class="contenedor footer-content">
+                <div class="contact-us">
+                    <h2 class="brand">InstaShopping Chile</h2>
+                    <div class="Enviar">
+                        <h2 class="brand2">¿Quieres que tu tienda aparezca en ISC?</h2>
+                        <form method="post" action="registrar.php">
+                            <label for="fname">Escribe el nombre de tu tienda pública (sin @)</label><br>
+                            <input type="text" id="fname" name="fname" placeholder="@"><br>
+                            <input type="submit" name="register" value="Enviar">
+                        </form>
+                    </div>
+                </div>
+                <div class="social-media">
+                    <a href="./" class="social-media-icon">
+                        <i class='bx bxl-facebook'></i>
+                    </a>
+                    <a href="./" class="social-media-icon">
+                        <i class='bx bxl-twitter' ></i>
+                    </a>
+                    <a href="./" class="social-media-icon">
+                        <i class='bx bxl-instagram' ></i>
+                    </a>
+                </div>
+        </div>
+        <div class="line"></div>
+    </footer>
+    <script src="js/menu.js"></script>
+    <script src="js/lightbox.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/jquery-3.5.1.min.js"></script>
+</body>
+</html>
