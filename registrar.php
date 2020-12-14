@@ -49,8 +49,6 @@ if (isset($_POST["register"])){
                 die("Connection failed: " . mysqli_connect_error());
             }
             
-            echo "Connected successfully";
-            
             $sql = "INSERT INTO informaciontiendas 
             (username,idInstagram,fullname,fotoPerfil,tipoCuenta,cantidadPosts,numeroSeguidores,numeroSeguidos,biografia,estrellas)
             VALUES ('$a','$idInstagram','$fullname','$fotoPerfil','$tipoCuenta','$cantidadPosts','$numeroSeguidores','$numeroSeguidos','$biografia',0)";
