@@ -61,7 +61,7 @@ if (isset($_POST["register"])){
             }
             mysqli_close($conn);
             ?>
-            <h3 class="ok">Tu cuenta se registró </h3>
+            <h3 class="ok">Tu cuenta se registró</h3>
             <?php
         }else{
             ?>
