@@ -8,9 +8,9 @@
 
     if(isset($_POST["consulta"])){
         $q = $mysqli->real_escape_string($_POST["consulta"]);
-        $query = "SELECT username, fullname, fotoPerfil, estrellas, tipoCuenta FROM informaciontiendas 
+        $query = "SELECT username, fullname, fotoPerfil, estrellas, tipoCuenta, biografia FROM informaciontiendas 
         WHERE username LIKE '%".$q."%' OR fullname LIKE '%".$q."%' OR tipoCuenta
-        LIKE '%".$q."%'";
+        LIKE '%".$q."%' OR biografia LIKE '%".$q."%'";
     }
     $resultado = $mysqli->query($query);
 
