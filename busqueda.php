@@ -31,7 +31,7 @@
             $salida.="
                     <tr class='tr-abajo'> 
                         <td><img class='imagenxd' src=".$fila["fotoPerfil"]."></td>
-                        <td>".$fila["username"]."</td>
+                        <td >".$fila["username"]."</td>
                         <td>".$fila["fullname"]."</td>
                         <td>".$fila["tipoCuenta"]."</td>
                         <td>".$fila["estrellas"]."</td>
