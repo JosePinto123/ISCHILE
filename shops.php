@@ -1,7 +1,7 @@
 <?php
 
-        $name = $_GET["id"];
-        $name = ltrim($name,'@');
+        $nameArroba = $_GET["id"];
+        $name = ltrim($nameArroba,'@');
         $url = "https://www.instagram.com/";
         $url = $url . $name; 
         $final = "/?__a=1";
@@ -13,6 +13,7 @@
         $numeroSeguidos = $objeto['graphql']['user']['edge_follow']['count'];
         $biografia = $objeto['graphql']['user']['biography'];
         $fotoPerfil = $objeto['graphql']['user']['profile_pic_url'];
+        $fullname = $objeto['graphql']['user']['full_name'];
         
 ?>
 
@@ -43,7 +44,7 @@
                     <img src=<?php echo $fotoPerfil;?> alt="">
                 </div>
                 <div class="profile-user-settings">
-                    <h1 class="profile-user-name"><?php echo $name;?></h1> 
+                    <h1 class="profile-user-name"><?php echo $nameArroba;?></h1> 
                 </div>
                 <div class="profile-stats">                    
                     <ul>
@@ -54,7 +55,7 @@
 
                 </div>
                 <div class="profile-bio">
-                    <span class="profile-real-name">Jane Doe</span>
+                    <span class="profile-real-name"><?php echo $fullname;?></span>
                     <p><?php echo $biografia;?></p>
                     
                 </div>
