@@ -14,6 +14,7 @@
         $biografia = $objeto['graphql']['user']['biography'];
         $fotoPerfil = $objeto['graphql']['user']['profile_pic_url'];
         $fullname = $objeto['graphql']['user']['full_name'];
+        $urlBiografia = $objeto['graphql']['user']['external_url'];
         
 ?>
 
@@ -57,6 +58,7 @@
                 <div class="profile-bio">
                     <span class="profile-real-name"><?php echo $fullname;?></span>
                     <p><?php echo $biografia;?></p>
+                    <a target='_blank' href="<?php echo $urlBiografia;?>"><?php echo $urlBiografia;?></a>
                     
                 </div>
             </div>
