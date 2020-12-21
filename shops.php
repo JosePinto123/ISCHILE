@@ -1,6 +1,7 @@
 <?php
         $name = $_GET["id"];
-   
+        
+
 ?>
 
 <!DOCTYPE html>
@@ -18,9 +19,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <script id="dsq-count-scr" src="//ischile.disqus.com/count.js" async></script>
-    
-    
-    
+
 </head>
 <body>
     <div class="wrap head2">
@@ -43,7 +42,9 @@
 
                 </div>
                 <div class="profile-bio">
-                    <p><span class="profile-real-name">Jane Doe</span> Lorem ipsum dolor sit, amet consectetur adipisicing elit 📷✈️🏕️</p>
+                    <span class="profile-real-name">Jane Doe</span>
+                    <p> Lorem ipsum dolor sit, amet consectetur adipisicing elit 📷✈️🏕️</p>
+                    
                 </div>
             </div>
             <!-- End of profile section -->
