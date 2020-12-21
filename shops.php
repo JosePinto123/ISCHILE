@@ -1,7 +1,19 @@
 <?php
-        $name = $_GET["id"];
-        
 
+        $name = $_GET["id"];
+        $name = ltrim($name,'@');
+        $url = "https://www.instagram.com/";
+        $url = $url . $name; 
+        $final = "/?__a=1";
+        $url = $url . $final;
+        $jsonFile = file_get_contents($url);
+        $objeto = json_decode($jsonFile,true);
+        $cantidadPosts = $objeto['graphql']['user']['edge_owner_to_timeline_media']['count'];
+        $numeroSeguidores = $objeto['graphql']['user']['edge_followed_by']['count'];
+        $numeroSeguidos = $objeto['graphql']['user']['edge_follow']['count'];
+        $biografia = $objeto['graphql']['user']['biography'];
+        $fotoPerfil = $objeto['graphql']['user']['profile_pic_url'];
+        
 ?>
 
 <!DOCTYPE html>
@@ -28,22 +40,22 @@
         <div class="container">
             <div class="profile">
                 <div class="profile-image">
-                    <img src="https://images.unsplash.com/photo-1513721032312-6a18a42c8763?w=152&h=152&fit=crop&crop=faces" alt="">
+                    <img src=<?php echo $fotoPerfil;?> alt="">
                 </div>
                 <div class="profile-user-settings">
                     <h1 class="profile-user-name"><?php echo $name;?></h1> 
                 </div>
                 <div class="profile-stats">                    
                     <ul>
-                        <li><span class="profile-stat-count">164</span> posts</li>
-                        <li><span class="profile-stat-count">188</span> followers</li>
-                        <li><span class="profile-stat-count">206</span> following</li>
+                        <li><span class="profile-stat-count"><?php echo $cantidadPosts;?></span> posts</li>
+                        <li><span class="profile-stat-count"><?php echo $numeroSeguidores;?></span> followers</li>
+                        <li><span class="profile-stat-count"><?php echo $numeroSeguidos;?></span> following</li>
                     </ul>
 
                 </div>
                 <div class="profile-bio">
                     <span class="profile-real-name">Jane Doe</span>
-                    <p> Lorem ipsum dolor sit, amet consectetur adipisicing elit 📷✈️🏕️</p>
+                    <p><?php echo $biografia;?></p>
                     
                 </div>
             </div>
