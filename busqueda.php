@@ -28,18 +28,15 @@
                     <tbody>";
 
         while($fila = $resultado->fetch_assoc()){
-            $salida.="
-                    <tr class='tr-abajo'> 
+            $salida.="<tr class='tr-abajo'>
                         <td><img class='imagenxd' src=".$fila["fotoPerfil"]."></td>
-                        <td>".$fila["username"]."</td>
+                        <td><a style='color:black;' href='/shops.php?id=".$fila["username"]."'>".$fila["username"]."</a></td>
                         <td>".$fila["fullname"]."</td>
                         <td>".$fila["tipoCuenta"]."</td>
                         <td>".$fila["estrellas"]."</td>
                     </tr>";
         }
-
         $salida.="</tbody></table>";
-    
     } else {
         $salida.="No encontrado :( ";
     }
