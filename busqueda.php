@@ -4,7 +4,7 @@
     $mysqli = new mysqli("localhost","root","","login_tuto");
 
     $salida = "";
-    $query = "SELECT * FROM informaciontiendas ORDER By estrellas DESC";
+    $query = "SELECT * FROM informaciontiendas ORDER By cantidadPosts DESC";
 
     if(isset($_POST["consulta"])){
         $q = $mysqli->real_escape_string($_POST["consulta"]);
@@ -22,7 +22,6 @@
                             <td>Usuario</td>
                             <td>Fullname</td>
                             <td>Categoría</td>
-                            <td>Estrellas(1-5)</td>
                         </tr>
                     </thead>
                     <tbody>";
@@ -33,7 +32,6 @@
                         <td><a style='color:black;' href='/shops.php?id=".$fila["username"]."'>".$fila["username"]."</a></td>
                         <td>".$fila["fullname"]."</td>
                         <td>".$fila["tipoCuenta"]."</td>
-                        <td>".$fila["estrellas"]."</td>
                     </tr>";
         }
         $salida.="</tbody></table>";
