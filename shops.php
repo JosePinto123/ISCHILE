@@ -1,6 +1,4 @@
 <?php
-
-
         $nameArroba = $_GET["id"];
         $name = ltrim($nameArroba,'@');
         $url = "https://www.instagram.com/";
