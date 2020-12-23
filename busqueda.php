@@ -20,7 +20,7 @@
                         <tr class='tr'>
                             <td>Foto</td>
                             <td>Usuario</td>
-                            <td>Fullname</td>
+                            <td>Nombre</td>
                             <td>Categoría</td>
                         </tr>
                     </thead>
